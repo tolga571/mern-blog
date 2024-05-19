@@ -7,6 +7,7 @@ import SignUp from './pages/SignUp';
 import Projects from './pages/Projects';
 
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/projects' element={<Projects />} />
         </Routes>
-        {/* https://youtu.be/Kkht2mwSL_I?t=1847 */}
+        <Footer/>
       </BrowserRouter>
     </>
   )
