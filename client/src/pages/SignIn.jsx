@@ -2,10 +2,11 @@
 /*eslint no-empty: "error"*/
 
 import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { signInStart, signInSuccess, signInFailure } from '../redux/user/userSlice';
+import OAuth from '../components/OAuth';
 
 export default function SignIn() {
   const [formData, setFormData] = useState({});
@@ -41,6 +42,10 @@ export default function SignIn() {
       dispatch(signInFailure(error.message));
     }
   }
+
+  useEffect(() => {
+    console.log('VITE_FIREBASE_API_KEY:', import.meta.env.VITE_FIREBASE_API_KEY);
+  }, []);
   return (
     <div className='min-h-screen mt-20'>
       <div className='flex max-w-3xl mx-auto p-3 flex-col md:flex-row md:items-center gap-5'>
@@ -76,6 +81,7 @@ export default function SignIn() {
                 ) : "Sign In"
               }
             </Button>
+            <OAuth />
           </form>
           <div className='flex gap-2 text-sm mt-5'>
             <span>Dont have an account?</span>

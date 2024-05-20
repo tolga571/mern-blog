@@ -1,1 +1,1 @@
-## https://youtu.be/Kkht2mwSL_I?t=3968 bu linkteyiz
+## https://youtu.be/Kkht2mwSL_I?t=12961 bu linkteyiz
