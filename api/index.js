@@ -10,7 +10,7 @@ import cookieParser from "cookie-parser";
 dotenv.config({ path: "../.env" });
 
 mongoose
-  .connect(process.env.MONGO_URI) // .env içerisindeki bağlantı kodu tırnak içine alınmayınca oluyor tırnak içine alırsan hata veriyor
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDb is connected");
   })
@@ -20,7 +20,7 @@ mongoose
 
 const app = express();
 
-app.use(express.json()); // json verileri console vb alanlara düzgün yansıtma aktarma için bu bir şart
+app.use(express.json());
 app.use(cookieParser());
 
 app.listen(3000, () => {
