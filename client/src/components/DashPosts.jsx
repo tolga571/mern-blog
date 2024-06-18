@@ -54,7 +54,7 @@ export default function DashPosts() {
         method: 'DELETE',
       });
       const data = await res.json();
-      if(!res.ok) {
+      if (!res.ok) {
         console.log(data.message);
       } else {
         setUserPosts((prev) =>
@@ -89,8 +89,8 @@ export default function DashPosts() {
             </Table.Head>
             {userPosts.map((post) => (
               // eslint-disable-next-line react/jsx-key
-              <Table.Body className="divide-y">
-                <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
+              <Table.Body key={post._id} className="divide-y">
+                <Table.Row key={post._id} className="bg-white dark:border-gray-700 dark:bg-gray-800">
                   <Table.Cell>
                     {new Date(post.updatedAt).toLocaleDateString()}
                   </Table.Cell>
