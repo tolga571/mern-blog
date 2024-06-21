@@ -13,6 +13,7 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDb is connected");
+    console.log(process.env.MONGO_URI);
   })
   .catch((err) => {
     console.log(err);
