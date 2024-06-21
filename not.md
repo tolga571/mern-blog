@@ -1,0 +1,1 @@
+## https://youtu.be/Kkht2mwSL_I?t=26792 bu linkteyiz
